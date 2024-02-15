@@ -7,7 +7,7 @@ c=0
 echo "Enter a number:"
 read n
 
-if [ $n == 1 ]; then
+if [ $n == 1 ] || [ $n == 0 ]; then
 	echo "Neither prime nor composite"
 	
 elif [ $n -lt 0 ]; then
