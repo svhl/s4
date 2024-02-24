@@ -20,5 +20,5 @@ You know how.
 
 ### C:
 
-`cc [filename].c` or `cc [filename].c -o [name]`
+`cc [filename].c` or `cc [filename].c -o [name]`\
 `./a.out` or `./[name].out`
