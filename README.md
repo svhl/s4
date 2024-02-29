@@ -13,8 +13,7 @@ Make changes to comments, file names, etc. if you're gonna use these.
 
 ## How to use
 
-You know how.
-
+If it works IT WORKS!
 ### Bash:
 
 `bash [filename].sh`
