@@ -1,5 +1,5 @@
 // write a shared memory program where there are 2 programs
-// reader – reads the values from shared memory, calculates nCr value and prints it
+// reader – reads the values from shared memory, check whether it is palindrome, also prints reverse
 
 #include <sys/ipc.h>
 #include <sys/shm.h>
