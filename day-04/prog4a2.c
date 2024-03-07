@@ -13,7 +13,7 @@ void main()
 	int *n2 = n1 + 1;
 	int *n3 = n2 + 1;
 	printf("Data read from shared memory:\nn! = %d\nr! = %d\n(n - r)! = %d\n", *n1, *n2, *n3);
-	int ncr = *n1 * *n2 / *n3;
+	int ncr = *n1 / (*n2 * *n3);
 	printf("nCr = %d\n", ncr);
 	shmdt(n1);
 	shmdt(n2);
