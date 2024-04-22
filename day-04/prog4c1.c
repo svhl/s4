@@ -11,7 +11,7 @@ void main()
 	int shmid = shmget(key, sizeof(int), 0666 | IPC_CREAT);
 	int *n = (int*)shmat(shmid, (void*)0, 0);
 	printf("Enter a number:\n");
-	scanf("%d", &n);
-	printf("Data written in shared memory:\n%d\n", n);
+	scanf("%d", n);
+	printf("Data written in shared memory:\n%d\n", *n);
 	shmdt(n);
 }
