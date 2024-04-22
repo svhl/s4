@@ -10,10 +10,12 @@ Make changes to comments, file names, etc. if you're gonna use these.
 | [2](https://github.com/svhl/s4/tree/main/day-02)  | 15 Feb '24| Shell scripts                 |
 | [3](https://github.com/svhl/s4/tree/main/day-03)  | 22 Feb '24| System calls                  |
 | [4](https://github.com/svhl/s4/tree/main/day-04)  | 29 Feb '24| IPC using shared memory       |
+| [5](https://github.com/svhl/s4/tree/main/day-05)  | 07 Mar '24| CPU scheduling algorithms     |
 
 ## How to use
 
-if it works it WORKS!
+If it works IT WORKS!
+
 ### Bash:
 
 `bash [filename].sh`
