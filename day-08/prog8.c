@@ -1,16 +1,26 @@
 // memory allocation methods for fixed partition using linked list
 // first fit, worst fit & best fit
 
+#include <stdlib.h>
 #include <stdio.h>
+
+struct node
+{
+	int data;
+	struct node *next;
+};
+
+struct node *proc, *head, *tail, *ptr;
+int item;
 
 void main()
 {
-	int i, j, m, p, ch, temp;
+	int i, j, p, m, ch, temp;
 	printf("Enter no. of memory partitions:\n");
 	scanf("%d", &m);
 	printf("Enter no. of processes:\n");
 	scanf("%d", &p);
-	int mem[m], initmem[m], proc[p];
+	int mem[m], initmem[m];
 	printf("Enter sizes of memory partitions:\n");
 
 	for(i = 0; i < m; i++)
@@ -23,7 +33,21 @@ void main()
 
 	for(i = 0; i < p; i++)
 	{
-		scanf("%d", &proc[i]);
+		proc = (struct node*)malloc(sizeof(struct node));
+		scanf("%d", &proc->data);
+		proc->next = NULL;
+
+		if(head == NULL)
+		{
+			head = proc;
+			tail = proc;
+		}
+
+		else
+		{
+			tail->next = proc;
+			tail = proc;
+		}
 	}
 
 	printf("\nMenu\n");
@@ -89,21 +113,26 @@ void main()
 		return;
 	}
 
-	for(i = 0; i < p; i++)
+	ptr = head;
+	i = 1;
+
+	while(ptr != NULL)
 	{
 		for(j = 0; j < m; j++)
 		{
-			if(proc[i] <= mem[j])
+			if(ptr->data <= mem[j])
 			{
-				mem[j] -= proc[i];
-				printf("P%d allocated to block %d\n", i + 1, initmem[j]);
+				mem[j] -= ptr->data;
+				printf("P%d allocated to block %d\n", i, initmem[j]);
 				break;
 			}
 		}
 
 		if(j == m)
 		{
-			printf("P%d can't be allocated\n", i + 1);
+			printf("P%d can't be allocated\n", i);
 		}
+
+		ptr = ptr->next;
 	}
 }
