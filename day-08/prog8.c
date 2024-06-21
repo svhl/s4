@@ -26,7 +26,6 @@ void main()
 	for(i = 0; i < m; i++)
 	{
 		scanf("%d", &mem[i]);
-		initmem[i] = mem[i];
 	}
 
 	printf("Enter sizes of processes:\n");
@@ -76,10 +75,6 @@ void main()
 					temp = mem[j];
 					mem[j] = mem[j+1];
 					mem[j+1] = temp;
-					
-					temp = initmem[j];
-					initmem[j] = initmem[j+1];
-					initmem[j+1] = temp;
 				}
 			}
 		}
@@ -98,10 +93,6 @@ void main()
 					temp = mem[j];
 					mem[j] = mem[j+1];
 					mem[j+1] = temp;
-
-					temp = initmem[j];
-					initmem[j] = initmem[j+1];
-					initmem[j+1] = temp;
 				}
 			}
 		}
@@ -111,6 +102,12 @@ void main()
 	{
 		printf("\nWrong choice\n");
 		return;
+	}
+
+	// copy original values for printing
+	for(i = 0; i < m; i++)
+	{
+		initmem[i] = mem[i];
 	}
 
 	ptr = head;
@@ -134,5 +131,6 @@ void main()
 		}
 
 		ptr = ptr->next;
+		i++;
 	}
 }
