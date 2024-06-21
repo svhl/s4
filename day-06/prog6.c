@@ -31,10 +31,12 @@ void consumer()
 
 void main()
 {
+	// generate random number every time
 	srand(time(NULL));
 
 	for(i = 0; i < 10; i++)
 	{
+		// otherwise 4 7 8 6 4 6 7 3 10 2 generated every time
 		n = (rand() % 10) + 1;
 		printf("#%d Random number is %d\n", i, n);
 
