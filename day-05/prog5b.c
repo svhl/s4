@@ -49,6 +49,6 @@ void main()
 		t += bt[s];
 	}
 
-	printf("\nAverage turnaround time = %f\n", twt / n);
 	printf("Average turnaround time = %f\n", ttt / n);
+	printf("\nAverage waiting time = %f\n", twt / n);
 }
