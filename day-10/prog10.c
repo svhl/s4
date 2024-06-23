@@ -162,6 +162,8 @@ void main()
 			res = c - 1 - temp;
 			tot += res;
 			printf("\n%d -> %d = %d", temp, c - 1, res);
+			// usually length of entire cylinder also added
+			// remove if not needed
 			res = c - 1;
 			tot += res;
 			printf("\n%d -> 0 = %d", c - 1, res);
@@ -200,6 +202,8 @@ void main()
 
 			tot += temp;
 			printf("\n%d -> 0 = %d", temp, res);
+			// usually length of entire cylinder also added
+			// remove if not needed
 			res = c - 1;
 			tot += res;
 			printf("\n0 -> %d = %d", c - 1, res);
