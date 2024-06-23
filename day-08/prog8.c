@@ -20,7 +20,7 @@ void main()
 	scanf("%d", &m);
 	printf("Enter no. of processes:\n");
 	scanf("%d", &p);
-	int mem[m], initmem[m];
+	int mem[m];
 	printf("Enter sizes of memory partitions:\n");
 
 	for(i = 0; i < m; i++)
@@ -104,12 +104,6 @@ void main()
 		return;
 	}
 
-	// copy original values for printing
-	for(i = 0; i < m; i++)
-	{
-		initmem[i] = mem[i];
-	}
-
 	ptr = head;
 	i = 1;
 
@@ -119,8 +113,8 @@ void main()
 		{
 			if(ptr->data <= mem[j])
 			{
-				mem[j] -= ptr->data;
-				printf("P%d allocated to block %d\n", i, initmem[j]);
+				printf("P%d allocated to block %d\n", i, mem[j]);
+				mem[j] = 0;
 				break;
 			}
 		}
